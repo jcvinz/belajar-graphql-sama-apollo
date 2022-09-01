@@ -1,0 +1,13 @@
+query MortyCharacters {
+    characters(filter: {name: "morty"}) {
+        info {
+            count
+        }
+        results {
+            name
+            image
+            species
+            status
+        }
+    }
+}
