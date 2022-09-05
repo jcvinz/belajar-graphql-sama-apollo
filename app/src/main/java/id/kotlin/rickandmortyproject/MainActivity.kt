@@ -4,27 +4,31 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 import id.kotlin.rickandmortyproject.data.Resource
 import id.kotlin.rickandmortyproject.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var mainViewModel: MainViewModel
+    private val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setUpVM()
+//        setUpVM()
         getData()
     }
 
-    private fun setUpVM() {
-        val factory = ViewModelFactory.getInstance()
-        mainViewModel = ViewModelProvider(this, factory)[MainViewModel::class.java]
-    }
+//    private fun setUpVM() {
+//        val factory = ViewModelFactory.getInstance()
+//        mainViewModel = ViewModelProvider(this, factory)[MainViewModel::class.java]
+//    }
 
     private fun getData() {
         mainViewModel.getAllCharacters()
