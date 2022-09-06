@@ -1,7 +1,10 @@
-query MortyCharacters {
-    characters(filter: {name: "morty"}) {
+query MortyCharacters($page: Int) {
+    characters(filter: {name: "morty"}, page: $page) {
         info {
             count
+            pages
+            next
+            prev
         }
         results {
             name

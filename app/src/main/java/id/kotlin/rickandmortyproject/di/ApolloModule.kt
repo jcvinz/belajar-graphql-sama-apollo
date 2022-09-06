@@ -6,7 +6,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import id.kotlin.rickandmortyproject.data.ApolloInstance
 import okhttp3.OkHttpClient
 import javax.inject.Named
 import javax.inject.Singleton
