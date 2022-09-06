@@ -15,5 +15,5 @@ object RepositoryModule {
 
     @Provides
     @Singleton
-    fun provideDataRepo(@Named("apolloClient") apolloClient: ApolloClient) = DataRepository(apolloClient)
+    fun provideDataRepo(apolloClient: ApolloClient) = DataRepository(apolloClient)
 }

@@ -16,8 +16,7 @@ object ApolloModule {
     private const val BASE_URL = "https://rickandmortyapi.com/graphql"
     @Provides
     @Singleton
-    @Named("apolloClient")
-    fun provideApolloClient(@Named("httpClient") httpClient: OkHttpClient): ApolloClient {
+    fun provideApolloClient(httpClient: OkHttpClient): ApolloClient {
         return ApolloClient.Builder()
             .serverUrl(BASE_URL)
             .okHttpClient(httpClient)
