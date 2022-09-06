@@ -1,10 +1,5 @@
 package id.kotlin.rickandmortyproject
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import id.kotlin.rickandmortyproject.data.DataRepository
-import id.kotlin.rickandmortyproject.di.Injection
-
 //class ViewModelFactory private constructor(private val dataRepository: DataRepository) :
 //    ViewModelProvider.NewInstanceFactory() {
 //
